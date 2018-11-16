@@ -40,8 +40,8 @@ app.use(
   })
 );
 
-app.get('/',( req, res, next) => {
-  res.json(cheeses);
+app.get('/api/cheeses',( req, res, next) => {
+  res.status(200).json(cheeses);
 });
 
 function runServer(port = PORT) {
